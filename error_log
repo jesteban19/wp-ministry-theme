@@ -1,0 +1,2 @@
+[20-Mar-2017 11:55:39 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/brazosabiertos/public_html/wp-content/themes/Archivo-comprimido/404.php on line 10
+[24-Mar-2017 03:58:21 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/brazosabiertos/public_html/wp-content/themes/Archivo-comprimido/404.php on line 10
