@@ -13,27 +13,31 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<section class="footer-sidebars">
-			<div class="footer-item">
-				<?php if(is_active_sidebar('footer-1')): ?>
-			    <?php dynamic_sidebar('footer-1');?>
-			    <?php endif;?>
+	<footer id="colophon" class="site-footer blog-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<?php if(is_active_sidebar('footer-1')): ?>
+				    <?php dynamic_sidebar('footer-1');?>
+				    <?php endif;?>
+				</div>
+
+				<div class="col-md-8">
+					<?php if(is_active_sidebar('footer-2')): ?>
+				    <?php dynamic_sidebar('footer-2');?>
+				    <?php endif;?>
+				</div>
+
 			</div>
 
-			<div class="footer-item-2">
-				<?php if(is_active_sidebar('footer-2')): ?>
-			    <?php dynamic_sidebar('footer-2');?>
-			    <?php endif;?>
+			<div class="row">
+				<p>Blog template built for <a target="_blank" href="http://informaticomanchay.com/portafolio/">Informatico Manchay</a> por <a target="_blank" href="https://twitter.com/josephdeveloper">@josephdeveloper</a>.</p>
+			<p>
+		        <a href="#">Regresar Arriba</a>
+		     </p>
 			</div>
-
-		</section>
-
-		<!--<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brazosabiertos' ) ); ?>"><?php printf( __(esc_html__( 'Website Powered by %s', 'brazosabiertos' ), 'WordPress' ),'brazosabiertos'); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'brazosabiertos' ), 'brazosabiertos', '<a href="http://informaticomanchay.com" rel="designer">Joseph Esteban Carrasco</a>' ); ?>
-		</div>--><!-- .site-info -->
+			
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
@@ -42,7 +46,7 @@
 <?php wp_footer(); ?>
 <script>
 	$(function(){
-		$('#primary-menu').eq(0).slicknav();
+		//$('#primary-menu').eq(0).slicknav();
 	});
 </script>
 </body>

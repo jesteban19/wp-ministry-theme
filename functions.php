@@ -142,13 +142,13 @@ add_action( 'widgets_init', 'brazosabiertos_widgets_init' );
  * Enqueue scripts and styles.
  */
 function brazosabiertos_scripts() {
-	wp_enqueue_style( 'brazosabiertos-style-theme',get_template_directory_uri().'/css/theme.css');
-	wp_enqueue_style( 'brazosabiertos-style-nav',get_template_directory_uri().'/css/slicknav.css');
-	// wp_enqueue_style( 'brazosabiertos-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'brazosabiertos-style-theme',get_template_directory_uri().'/css/style.css');
+	//wp_enqueue_style( 'brazosabiertos-style-nav',get_template_directory_uri().'/css/slicknav.css');
+	wp_enqueue_style( 'brazosabiertos-style','https://fonts.googleapis.com/css?family=Lato:300,400,700' );
 	wp_enqueue_style( 'brazosabiertos-style-font-awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 	
 	wp_enqueue_script('brazosabiertos-jquery','https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',array(),'20151215', true);
-	wp_enqueue_script( 'brazosabiertos-navigation', get_template_directory_uri() . '/js/jquery.slicknav.js', array(), '20151215', true );
+	wp_enqueue_script( 'brazosabiertos-navigation', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'brazosabiertos-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -190,6 +190,8 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/post-type-ministerio.php';
 require get_template_directory() . '/inc/post-type-proyectos.php';
+
+ require get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');

@@ -24,13 +24,13 @@ gulp.task('sass', () =>
 gulp.task('default', () =>{
 	//iniciando el servidor Browser Sync
 	var files = [
-		'./css/theme.css',
+		'./css/style.css',
 		'./*.php',
 	]
 
 	browserSync.init(files,{
 		//browserSync con php server
-		proxy: "localhost/temas",
+		proxy: "localhost/jumcum",
 		notify: false
 	})
 
